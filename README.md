@@ -273,7 +273,7 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Media Texture                        | MT_        |            |                                                         |
 | Render Target                        | RT_        |            |                                                         |
 | Cube Render Target                   | RTC_       |            |                                                         |
-| Texture Light Profile                | TLP        |            |                                                         |
+| Texture Light Profile                | TLP_       |            |                                                         |
 
 <a name="anc-textures-packing"></a>
 <a name="1.2.6.1"></a>
