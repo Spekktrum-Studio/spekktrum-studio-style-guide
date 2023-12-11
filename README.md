@@ -123,9 +123,9 @@ Depending on how your asset variants are made, you can chain together variant na
 
 | Asset Type              | Asset Name                                                 |
 | ----------------------- | ---------------------------------------------------------- |
-| Static Mesh (01)        | S_Rock_01                                                  |
-| Static Mesh (02)        | S_Rock_02                                                  |
-| Static Mesh (03)        | S_Rock_03                                                  |
+| Static Mesh (01)        | SM_Rock_01                                                  |
+| Static Mesh (02)        | SM_Rock_02                                                  |
+| Static Mesh (03)        | SM_Rock_03                                                  |
 | Material                | M_Rock                                                     |
 | Material Instance (Snow)| MI_Rock_Snow                                               |
 
@@ -165,21 +165,23 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 <a name="1.2.1"></a>
 #### 1.2.1 Most Common
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Level / Map             |            |            | [Should be in a folder called Maps.](#2.4) |
-| Level (Persistent)      |            | _P         |                                  |
-| Level (Audio)           |            | _Audio     |                                  |
-| Level (Lighting)        |            | _Lighting  |                                  |
-| Level (Geometry)        |            | _Geo       |                                  |
-| Level (Gameplay)        |            | _Gameplay  |                                  |
-| Blueprint               | BP_        |            |                                  |
-| Material                | M_         |            |                                  |
-| Static Mesh             | S_         |            | Many use SM_. We use S_.         |
-| Skeletal Mesh           | SK_        |            |                                  |
-| Texture                 | T_         | _?         | See [Textures](#anc-textures)    |
-| Particle System         | PS_        |            |                                  |
-| Widget Blueprint        | WBP_       |            |                                  |
+| Asset Type              | Prefix         | Suffix     | Notes                               | Example             |
+| ----------------------- | -------------- | ---------- | ----------------------------------- | ------------------- |
+| Singleplayer Level / Map| Sp_(Act)       |            | [Should be in "Maps" folder.](#2.4) | Sp_A1_Courtyard	    |
+| Co-Op Level / Map       | Mp_Coop_(Act)  |	        |                                     |	Mp_Coop_A3_Cellar   |
+| Multiplayer Level / Map | Mp_(Gamemode)  |            |				      | Mp_CTF_Graveyard    |
+| Level (Persistent)      |                | _P         |                                     |			    |
+| Level (Audio)           |                | _Audio     |                                     |			    |
+| Level (Lighting)        |                | _Lighting  |                                     |			    |
+| Level (Geometry)        |                | _Geo       |                                     |			    |
+| Level (Gameplay)        |                | _Gameplay  |                                     |			    |
+| Blueprint               | BP_            |            |                                     |			    |
+| Material                | M_             |            |                                     |			    |
+| Static Mesh             | SM_            |            |                                     |			    |
+| Skeletal Mesh           | SK_            |            |                                     |			    |
+| Texture                 | T_             | _?         | See [Textures](#anc-textures)       |			    |
+| Particle System         | PS_            |            |                                     |			    |
+| Widget Blueprint        | WBP_           |            |                                     |			    |
 
 <a name="anc-animations"></a>
 <a name="1.2.2"></a>
@@ -188,16 +190,16 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
 | Aim Offset              | AO_        |            |                                  |
-| Aim Offset 1D           | AO_        |            |                                  |
+| Aim Offset 1D           | AO_        | _1D        |                                  |
 | Animation Blueprint     | ABP_       |            |                                  |
 | Animation Composite     | AC_        |            |                                  |
 | Animation Montage       | AM_        |            |                                  |
-| Animation Sequence      | A_         |            |                                  |
+| Animation Sequence      | AS_        |            |                                  |
 | Blend Space             | BS_        |            |                                  |
-| Blend Space 1D          | BS_        |            |                                  |
+| Blend Space 1D          | BS_        | _1         |                                  |
 | Level Sequence          | LS_        |            |                                  |
 | Morph Target            | MT_        |            |                                  |
-| Paper Flipbook          | PFB_       |            |                                  |
+| Paper Flipbook          | FB_        |            |                                  |
 | Rig                     | Rig_       |            |                                  |
 | Control Rig             | CR_        |            |                                  |
 | Skeletal Mesh           | SK_        |            |                                  |
@@ -207,32 +209,32 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 <a name="1.2.3"></a>
 ### 1.2.3 Artificial Intelligence
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| AI Controller           | AIC_       |            |                                  |
-| Behavior Tree           | BT_        |            |                                  |
-| Blackboard              | BB_        |            |                                  |
-| Decorator               | BTDecorator_ |          |                                  |
-| Service                 | BTService_ |            |                                  |
-| Task                    | BTTask_    |            |                                  |
-| Environment Query       | EQS_       |            |                                  |
-| EnvQueryContext         | EQS_       | Context    |                                  |
+| Asset Type              | Prefix       | Suffix       | Notes                            |
+| ----------------------- | ------------ | ------------ | -------------------------------- |
+| AI Controller           |              | _Controller  |                                  |
+| Behavior Tree           | BT_          |              |                                  |
+| Blackboard              | BB_          |              |                                  |
+| Decorator               | BTDecorator_ |              |                                  |
+| Service                 | BTService_   |              |                                  |
+| Task                    | BTTask_      |              |                                  |
+| Environment Query       | EQS_         |              |                                  |
+| EnvQueryContext         | EQS_         | _Context     |                                  |
 
 <a name="anc-bp"></a>
 <a name="1.2.4"></a>
 ### 1.2.4 Blueprints
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Blueprint               | BP_        |            |                                  |
-| Blueprint Component	  | BP_	       | Component  | I.e. BP_InventoryComponent       |
-| Blueprint Function Library | BPFL_   |            |                                  |
-| Blueprint Interface     | BPI_       |            |                                  |
-| Blueprint Macro Library | BPML_      |            | Do not use macro libraries if possible. |
-| Enumeration             | E          |            | No underscore.                   |
-| Structure               | F or S     |            | No underscore.                   |
-| Tutorial Blueprint      | TBP_       |            |                                  |
-| Widget Blueprint        | WBP_       |            |                                  |
+| Asset Type                 | Prefix     | Suffix     | Notes                                   |
+| -------------------------- | ---------- | ---------- | --------------------------------------- |
+| Blueprint                  | BP_        |            |                                         |
+| Blueprint Component	     | BP_	  | _Component | I.e. BP_Inventory_Component             |
+| Blueprint Function Library | BPFL_      |            |                                         |
+| Blueprint Interface        | BPI_       |            |                                         |
+| Blueprint Macro Library    | BPML_      |            | Do not use macro libraries if possible. |
+| Enumeration                | E_         |            |                                         |
+| Structure                  | S_         |            |                                         |
+| Tutorial Blueprint         | TBP_       |            |                                         |
+| Widget Blueprint           | WBP_       |            |                                         |
 
 <a name="anc-materials"></a>
 <a name="1.2.5"></a>
@@ -253,25 +255,25 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 <a name="1.2.6"></a>
 ### 1.2.6 Textures
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Texture                 | T_         |            |                                  |
-| Texture (Diffuse/Albedo/Base Color)| T_ | _D      |                                  |
-| Texture (Normal)        | T_         | _N         |                                  |
-| Texture (Roughness)     | T_         | _R         |                                  |
-| Texture (Alpha/Opacity) | T_         | _A         |                                  |
-| Texture (Ambient Occlusion) | T_     | _O         |                                  |
-| Texture (Bump)          | T_         | _B         |                                  |
-| Texture (Emissive)      | T_         | _E         |                                  |
-| Texture (Mask)          | T_         | _M         |                                  |
-| Texture (Specular)      | T_         | _S         |                                  |
-| Texture (Metallic)      | T_         | _M         |                                  |
-| Texture (Packed)        | T_         | _*         | See notes below about [packing](#anc-textures-packing). |
-| Texture Cube            | TC_        |            |                                  |
-| Media Texture           | MT_        |            |                                  |
-| Render Target           | RT_        |            |                                  |
-| Cube Render Target      | RTC_       |            |                                  |
-| Texture Light Profile   | TLP        |            |                                  |
+| Asset Type                           | Prefix     | Suffix     | Notes                                                   |
+| ------------------------------------ | ---------- | ---------- | ------------------------------------------------------- |
+| Texture                              | T_         |            |                                                         |
+| Texture (Diffuse/Albedo/Base Color)  | T_         | _BaseColor |                                                         |
+| Texture (Normal)                     | T_         | _Normal    |                                                         |
+| Texture (Roughness)                  | T_         | _Roughness |                                                         |
+| Texture (Alpha/Opacity)              | T_         | _Opacity   |                                                         |
+| Texture (Ambient Occlusion)          | T_         | _Occlusion |                                                         |
+| Texture (Bump)                       | T_         | _Bump      |                                                         |
+| Texture (Emissive)                   | T_         | _Emissive  |                                                         |
+| Texture (Mask)                       | T_         | _Mask      |                                                         |
+| Texture (Specular)                   | T_         | _Specular  |                                                         |
+| Texture (Metallic)                   | T_         | _Metallic  |                                                         |
+| Texture (Packed)                     | T_         | _*         | See notes below about [packing](#anc-textures-packing). |
+| Texture Cube                         | TC_        |            |                                                         |
+| Media Texture                        | MT_        |            |                                                         |
+| Render Target                        | RT_        |            |                                                         |
+| Cube Render Target                   | RTC_       |            |                                                         |
+| Texture Light Profile                | TLP        |            |                                                         |
 
 <a name="anc-textures-packing"></a>
 <a name="1.2.6.1"></a>
@@ -316,9 +318,9 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
-| Paper Flipbook          | PFB_       |            |                                  |
-| Sprite                  | SPR_       |            |                                  |
-| Sprite Atlas Group      | SPRG_      |            |                                  |
+| Paper Flipbook          | FB_        |            |                                  |
+| Sprite                  | Spr_       |            |                                  |
+| Sprite Atlas Group      | SAG_       |            |                                  |
 | Tile Map                | TM_        |            |                                  |
 | Tile Set                | TS_        |            |                                  |
 
@@ -329,25 +331,25 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
 | Physical Material       | PM_        |            |                                  |
-| Physics Asset	          | PHYS_      |            |                                  |
+| Physics Asset	          |            | _Physics   |                                  |
 | Destructible Mesh       | DM_        |            |                                  |
 
 <a name="anc-sounds"></a>
 <a name="1.2.10"></a>
 ### 1.2.10 Sounds
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Dialogue Voice          | DV_        |            |                                  |
-| Dialogue Wave           | DW_        |            |                                  |
-| Media Sound Wave        | MSW_       |            |                                  |
-| Reverb Effect           | Reverb_    |            |                                  |
-| Sound Attenuation       | ATT_       |            |                                  |
-| Sound Class             |            |            | No prefix/suffix. Should be put in a folder called SoundClasses |
+| Asset Type              | Prefix     | Suffix     | Notes                              |
+| ----------------------- | ---------- | ---------- | ---------------------------------- |
+| Dialogue Voice          | DV_        |            |                                    |
+| Dialogue Wave           | DW_        |            |                                    |
+| Media Sound Wave        | MSW_       |            |                                    |
+| Reverb Effect           | Reverb_    |            |                                    |
+| Sound Attenuation       | Att_       |            |                                    |
+| Sound Class             | Class      |            |                                    |
 | Sound Concurrency       |            | _SC        | Should be named after a SoundClass |
-| Sound Cue               | A_         | _Cue       |                                  |
-| Sound Mix               | Mix_       |            |                                  |
-| Sound Wave              | A_         |            |                                  |
+| Sound Cue               | A_         | _Cue       |                                    |
+| Sound Mix               | Mix_       |            |                                    |
+| Sound Wave              | A_         |            |                                    |
 
 <a name="anc-ui"></a>
 <a name="1.2.11"></a>
